@@ -1,0 +1,33 @@
+var pieecharts1=echarts.init(document.getElementById('pie1'));
+var option3={
+	series:[{
+		name:'年龄发布',
+		type:'pie',
+		center:['50%','50%'],
+		radius:['40%','60%'],
+		data:[
+			{value:1,name:'20岁以下'},
+			{value:4,name:'20~29岁'},
+			{value:2,name:'30~39岁'},
+			{value:2,name:'40~49岁'},
+			{value:1,name:'50岁以上'}
+		],
+		label:{
+			show:false
+		},
+		labelLine:{
+			show:false
+		}
+	}],
+	color:['#065aab','#065eab','#0682ab','#0696ab','#06a0ab'],
+	legend:{
+		bottom:'0%',
+		itemWidth:10,
+		itemHeight:10,
+		textStyle:{
+			color:'rgba(255,255,255,.5)',
+			fontSize:'10px'
+		}
+	}
+}
+pieecharts1.setOption(option3);

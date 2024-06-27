@@ -1,0 +1,221 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: url('../sccl/img/bg.jpg');
+	background-size: cover;
+	background-position: center;
+}
+header{
+	width: 100%;
+	height: 80px;
+	background: url('../sccl/img/head_bg.png');
+	background-size: 100% 100%;
+}
+header h1{
+	text-align: center;
+	color: #fff;
+	font-size: 30px;
+	line-height: 60px;
+}
+header #showTime{
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+
+
+section{
+	width: 100%;
+	height: 53.75rem;
+	display: flex;
+	flex-direction: row;
+}
+section .column:nth-child(1){
+	flex: 4;
+	/* background-color: olivedrab; */
+}
+section .column:nth-child(2){
+	flex: 8.5;
+	/* background-color: orange; */
+}
+section .column:nth-child(3){
+	flex: 4;
+	/* background-color: olivedrab; */
+}
+section .column{
+	display: flex;
+	flex-direction: column;
+}
+section .column .panel{
+	flex: 1;
+	border: 1px solid rgba(25, 186, 139,.17);
+	background: rgba(255, 255, 255, .04) url('../sccl/img/line(1).png');
+	margin-top: 10px;
+	position: relative;
+}
+section .column .panel::before{
+	content: "";
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-top: 2px solid #02a6b5;
+	border-left: 2px solid #02a6b5;
+}
+section .column .panel::after{
+	content: "";
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	border-top: 2px solid #02a6b5;
+	border-right: 2px solid #02a6b5;
+}
+
+section .column .panel .panel-footer{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+section .column .panel .panel-footer::before{
+	content: "";
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	left: 0;
+	bottom:0;
+	border-bottom: 2px solid #02a6b5;
+	border-left: 2px solid #02a6b5;
+}
+section .column .panel .panel-footer::after{
+	content: "";
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	right:0;
+	bottom: 0;
+	border-bottom: 2px solid #02a6b5;
+	border-right: 2px solid #02a6b5;
+}
+section .column .panel h2{
+	height: 20px;
+	line-height: 20px;
+	color: #fff;
+	text-align: center;
+	font-size: 15px;
+	font-weight: 400;
+	margin-top: 10px;
+}
+section .column .panel h2 a{
+	margin: 0 20px;
+	color: #fff;
+	text-decoration:none;
+}
+section .column .panel .chart{
+	width: 100%;
+	height: 240px;
+}
+
+
+
+section .column .number{
+	background: rgba(101, 132, 226,.1);
+	height: 122px;
+}
+section .column .number .no-item ul{
+	display: flex;
+}
+section .column .number .no-item ul li{
+	flex: 1;
+	color: #fff;
+	text-align: center;
+	list-style: none;
+	font-size: 45px;
+	font-family: eleFont;
+	height: 60px;
+	font-weight: 900;
+	padding: 5px 0;
+}
+section .column .number .no-item ul li:first-child::after{
+	width: 1px;
+	height: 50%;
+	content: "";
+	position: absolute;
+	background-color: rgba(255,255,255,.2);
+	right: 0;
+	top: 25%;
+}
+
+section .column .number .no-item2 ul{
+	display: flex;
+	list-style: none;
+	
+}
+section .column .number .no-item2 ul li{
+	flex: 1;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	padding-top: 10px;
+	color: rgba(255,255,255,.7);
+}
+
+
+
+section .column .map{
+	height: 700px;
+	background: rgba(101, 132, 226,.1);
+	margin-top: 30px;
+	position: relative;
+	overflow: hidden;/*超出部分不显示*/
+}
+section .column .map .mapchart{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 90%;
+	z-index: 999;
+}
+section .column .map .map1,section .column .map .map2,section .column .map .map3{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	
+}
+section .column .map .map1{
+	background: url('../sccl/img/map.png') no-repeat center;
+}
+section .column .map .map2{
+	background: url('../sccl/img/jt.png')  no-repeat center;
+	animation: back-rotate 10s linear infinite;
+}
+section .column .map .map3{
+	background: url('../sccl/img/lbx.png')  no-repeat center;
+	animation: rotate 15s linear infinite;
+}
+@keyframes rotate{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
+@keyframes back-rotate{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(-360deg);
+	}
+}
